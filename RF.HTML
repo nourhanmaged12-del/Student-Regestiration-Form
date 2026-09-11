@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial;
+    background: lightgray;
+    color:black;
+}
+
+.container {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.subtitle {
+    text-align: center;
+    
+}
+
+form {
+    background:whitesmoke;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow:0 0 10px gray
+}
+
+fieldset {
+    
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: rgb(77, 62, 62);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: grey;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.radio-option input {
+    width: auto;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.terms input {
+    width: auto;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Registration Form</h1>
+    <p class="subtitle">Please fill out the form below to register for the course.</p>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text"  placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email"  placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"  required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences &amp; Feedback</legend>
+
+            <div class="form-group">
+                <label for="city">Select Your City</label>
+                <select id="city" name="city">
+                    <option value="cairo">Cairo</option>
+                    <option value="alexandria">Alexandria</option>
+                    <option value="giza">Giza</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Short Bio / Comments</label>
+                <textarea id="bio" name="bio" placeholder="Tell us a bit about your goals"></textarea>
+            </div>
